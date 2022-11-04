@@ -1,5 +1,7 @@
 import React from "react";
-import EventItem from "./EventItem";
+import EventItem from "./event-item";
+
+import classes from "./event-list.module.css";
 
 interface EventListProps {
   items: any[];
@@ -9,7 +11,7 @@ export default function EventList(props: EventListProps) {
   const { items } = props;
 
   return (
-    <ul>
+    <ul className={classes.list}>
       {items.map((event) => {
         return (
           <EventItem
