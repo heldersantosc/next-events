@@ -1,6 +1,10 @@
 import classes from "./event-summary.module.css";
 
-function EventSummary(props: any) {
+interface IEventSummaryProps {
+  title: string;
+}
+
+function EventSummary(props: IEventSummaryProps) {
   const { title } = props;
 
   return (
