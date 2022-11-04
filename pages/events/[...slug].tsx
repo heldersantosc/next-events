@@ -5,6 +5,7 @@ import EventList from "../../components/events/event-list";
 import ResultsTitle from "../../components/results-title/results-title";
 import { getFilteredEvents } from "../../dummy-data";
 import Button from "../../components/ui/button";
+import ErrorAlert from "../../components/error-alert/error-alert";
 
 interface IEventListProps {}
 
@@ -33,7 +34,9 @@ export default function FilteredEventsPage(props: IEventListProps) {
     return (
       <Fragment>
         <div className="center">
-          <p className="center">Invalid filter. Please adjust your values!</p>
+          <ErrorAlert>
+            <p className="center">Invalid filter. Please adjust your values!</p>
+          </ErrorAlert>
           <Button link={"/events"}>Show All Events</Button>
         </div>
       </Fragment>
@@ -49,7 +52,9 @@ export default function FilteredEventsPage(props: IEventListProps) {
     return (
       <Fragment>
         <div className="center">
-          <p className="center">No events found for the chosen filter!</p>
+          <ErrorAlert>
+            <p className="center">No events found for the chosen filter!</p>
+          </ErrorAlert>
           <Button link={"/events"}>Show All Events</Button>
         </div>
       </Fragment>
