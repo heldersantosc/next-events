@@ -3,11 +3,11 @@ import EventItem from "./event-item";
 
 import classes from "./event-list.module.css";
 
-interface EventListProps {
+interface IEventListProps {
   items: any[];
 }
 
-export default function EventList(props: EventListProps) {
+export default function EventList(props: IEventListProps) {
   const { items } = props;
 
   return (
